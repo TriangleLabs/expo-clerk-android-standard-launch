@@ -32,4 +32,6 @@ When setting Android launch mode to "standard" instead of the default "singleTas
    }
    ```
 
-The Expo plugin `plugins/android-standard-launch.js` changes the Android launch mode to "standard." If you remove this plugin, you can see that the Oauth mode works fine again.
+You'll notice that after completing the OAuth flow and redirecting back to the app, the app hangs at the `app/oauth-native-callback.tsx` screen because `isSignedIn` is false.
+
+The Expo plugin `plugins/android-standard-launch.js` changes the Android launch mode to "standard." If you remove this plugin, you can see that the OAuth flow works as expected again.
